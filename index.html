@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nhyira Trading Ltd</title>
+<title>Sample Trading Ltd</title>
 <style>
 :root{--ink:#17264a;--ink-soft:rgba(23,38,74,.1);--accent:#d1a03a;--accent-soft:rgba(209,160,58,.16);--accent-ink:#1a1405;
 --paper:#f3f4f7;--card:#fff;--line:#e2e6ec;--text:#1b2433;--muted:#667487;
@@ -325,7 +325,7 @@ function load(){
   if(d&&d.v===C.version){S=d;}else{reseed();}
 }
 function reseed(){
-  S={v:C.version,seq:1000,online:false,sms:{balance:C.smsBalance!=null?C.smsBalance:850},
+  S={v:C.version,seq:1000,online:false,sms:{balance:C.smsBalance!=null?C.smsBalance:1},
      settings:Object.assign({org:C.name,sender:C.sender,phone:C.phone||'',location:C.location||''},C.settings||{}),t:{}};
   S.t=C.seed(K);
   S.t.sms=S.t.sms||[];S.t.activity=S.t.activity||[];
@@ -910,7 +910,7 @@ const row2=(label,val,bold)=>'<div style="display:flex;justify-content:space-bet
 const entryAmount=j=>r2(sum(j.lines,l=>Number(l.debit)||0));
 
 const APP_CONFIG={
- id:'books',version:1,name:'Nhyira Trading Ltd',product:'General Ledger & Accounts',sender:'NHYIRABKS',phone:'0209988771',
+ id:'books',version:1,name:'Nhyira Trading Ltd',product:'General Ledger & Accounts',sender:'SAMPLEAC',phone:'0200000000',
  ink:'#123a2e',accent:'#2f8f5b',accentInk:'#07160f',smsBalance:120,
  vendorName:'NYANSATEK',vendorPhone:'0536340578',
  tagline:'Every transaction posted as a proper double-entry — debits always equal credits — with a trial balance and financial statements derived live from the ledger, on this computer.',
